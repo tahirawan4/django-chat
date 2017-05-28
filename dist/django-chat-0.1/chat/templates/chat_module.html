@@ -1,0 +1,36 @@
+<script>
+    function myFunction() {
+        // Note that the path doesn't matter for routing; any WebSocket
+        // connection gets bumped over to WebSocket consumers
+        var text = $('textarea#chat').val();
+        socket = new WebSocket("ws://" + window.location.host + "/chat/");
+        socket.onmessage = function (e) {
+            var output = "ME:" + e.data + "<br>";
+            $("#my_chat").append(output);
+            {#            alert(e.data);#}
+        }
+        socket.onopen = function () {
+            $("textarea#chat").val('');
+            socket.send(text);
+        }
+        // Call onopen directly if socket is already open
+        if (socket.readyState == WebSocket.OPEN) socket.onopen();
+    }
+
+
+</script>
+
+<div class="container">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+
+        <label id="my_chat"></label>
+        <br>
+        <br>
+        <label for="comment">Chat:</label>
+        <textarea id='chat' class="form-control" rows="5" id="comment"></textarea>
+        <br>
+        <button onclick="myFunction()">Send</button>
+    </div>
+    <div class="col-lg-2"></div>
+</div>

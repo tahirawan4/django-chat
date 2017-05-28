@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+chat/__init__.py
+chat/consumers.py
+chat/routing.py
+chat/urls.py
+chat/views.py
+chat/templates/__init__.py
+chat/templates/chat.html
+chat/templates/chat_module.html
+django_chat.egg-info/PKG-INFO
+django_chat.egg-info/SOURCES.txt
+django_chat.egg-info/dependency_links.txt
+django_chat.egg-info/top_level.txt
