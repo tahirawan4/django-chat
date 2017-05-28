@@ -1,6 +1,6 @@
-=====
+
 Chat
-=====
+____
 
 Chat is a simple Django app to conduct Web-socket based chat.
 
