@@ -13,7 +13,7 @@ Quick start
 
     INSTALLED_APPS = [
         ...
-        'polls',
+        'chat',
         'channels',
     ]
 
@@ -39,8 +39,8 @@ Quick start
 	bootstrap
 	jquery
 	pip install asgi-redis
-	pip install channels==0.17.3
-	pip install daphne==0.15.0
+	pip install channels
+	pip install daphne
 
 7. You can Include this module in any of your page just by writing following
 
